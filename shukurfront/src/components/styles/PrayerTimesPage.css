@@ -1,0 +1,83 @@
+/* YourStylesheet.css */
+.prayer-times-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.current-prayer-time {
+    background-color: #4CAF50; /* A green background for the current prayer time */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.monthly-prayer-times table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.monthly-prayer-times th {
+    background-color: #f2f2f2; /* A light grey background for headers */
+    color: #333;
+    padding: 10px;
+    text-align: left;
+}
+
+.monthly-prayer-times td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* A light border for table rows */
+}
+
+/* Highlight the current date or prayer time */
+.monthly-prayer-times tr:nth-child(even) {background-color: #f9f9f9;}
+.monthly-prayer-times tr:hover {background-color: #ddd;}
+
+/* Style for the active time (e.g., current time) */
+.active-time {
+    color: #4CAF50; /* Same green color for the current time text */
+    font-weight: bold;
+}
+
+/* Style for the month tabs */
+.month-tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #ccc; /* Border around the tabs */
+    background-color: #f1f1f1; /* Light grey background for the tabs */
+}
+
+.month-tabs li {
+    float: left;
+}
+
+.month-tabs li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+.month-tabs li a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+}
+
+/* Active tab style */
+.month-tabs li a.active {
+    background-color: #4CAF50; /* Green background for the active tab */
+    color: white;
+}
+
+/* Clear floats after the tabs */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

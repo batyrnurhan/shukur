@@ -1,0 +1,254 @@
+.higher_footer {
+    /*background: url("") no-repeat;*/
+    background-size: cover;
+    padding: 50px 0; /* Adjust padding to match your design */
+}
+
+.higher_footer_b {
+    background: rgba(0, 0, 0, 0.59);
+    padding: 50px 0; /* Same padding for a consistent overlay effect */
+}
+
+.hf_container {
+    max-width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 20px; /* Adjust the padding */
+}
+
+.hf_first h3, .hf_first p {
+    color: #FFF;
+    font-family: Montserrat;
+}
+
+.hf_first h3 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.hf_first p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 162.9%;
+    margin-bottom: 20px; /* Spacing after the paragraph */
+}
+
+.hf_first form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hf_first input, .hf_first textarea {
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    padding: 12px 20px; /* Adjusted padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+}
+
+.hf_first input::placeholder, .hf_first textarea::placeholder {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 162.9%;
+}
+
+.hf_first button {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: #36873E;
+    padding: 15px 35px;
+    margin-top: 15px;
+    border: none; /* Remove border */
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.hf_card {
+    width: 100%; /* Adjust based on your layout requirements */
+    max-width: 400px;
+    background: white;
+    margin: 0 auto; /* Center the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative; /* For positioning arrows */
+    align-self: center; /* Align the card vertically */
+}
+
+.hf_card_padding {
+    padding: 50px 40px;
+}
+
+.hf_card img {
+    width: 120px; /* Adjusted width */
+    height: 120px; /* Adjusted height */
+    border-radius: 50%;
+    margin: 20px auto; /* Added margin */
+}
+
+.hf_card_one {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 162.9%;
+    color: #000;
+    margin-top: 20px; /* Spacing before the review text */
+}
+
+.hf_card_two {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 162.9%;
+    color: rgba(0, 0, 0, 0.50);
+    margin-top: 32px; /* Spacing before the reviewer's name */
+}
+
+.slaider_balls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slaider_balls div {
+    margin: 0 5px;
+    background: rgba(113, 113, 113, 0.37);
+    border-radius: 90px;
+    width: 8px; /* Adjust the width as necessary */
+    height: 8px; /* Adjust the height as necessary */
+}
+
+#loc1 {
+    background: rgba(0, 0, 0, 0.37);
+}
+
+.hf_card_three {
+    display: block; /* Changed from inline to block for width to take effect */
+    margin: 30px auto 0;
+    padding: 8px 4px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #26602C;
+    border-radius: 10px;
+    border: 1px solid #26602C;
+    text-decoration: none; /* Removes underline from link */
+    width: 60%; /* Adjust width as necessary */
+}
+
+.hf_left, .hf_right {
+    width: 24px; /* Or the size of your arrow images */
+    height: 24px;
+    position: absolute;
+    top: 50%; /* Centers the arrow vertically */
+    transform: translateY(-50%); /* Ensures the centering is accurate */
+    cursor: pointer;
+    z-index: 100; /* Ensures the arrows are clickable and above other elements */
+}
+
+.hf_left {
+    left: calc(-30% - 10px); /* Positions the left arrow outside and to the left of the container */
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+}
+
+.hf_right {
+    right: calc(-30% - 10px); /* Positions the right arrow outside and to the right of the container */
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+}
+.hf_review_container {
+    width: 100%; /* This should be 100% of the parent container width */
+    max-width: 1220px; /* Adjust to the maximum width you want for the container */
+    margin: auto; /* This centers the container if it's smaller than the max-width */
+}
+.slick-prev:before, .slick-next:before {
+    color: black; /* Or any color you wish */
+}
+.slick-slide {
+    padding: 0; /* Override default padding if necessary */
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+    .hf_container {
+        flex-direction: column;
+    }
+
+    .hf_card, .hf_first {
+        width: 100%;
+        max-width: 400px; /* Adjust max-width as necessary */
+        margin-top: 20px;
+    }
+
+    .hf_first p {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.hf_form_container {
+    background: rgba(0, 0, 0, 0.59); /* Semi-transparent background */
+    padding: 40px; /* Padding around the form */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 850px; /* Max width of the form container */
+    color: #FFFFFF; /* Text color */
+    font-family: 'Montserrat', sans-serif; /* Font family */
+}
+
+.hf_form_container h3 {
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: 900; /* Bold font weight */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.hf_form_container p {
+    font-size: 16px; /* Font size for the subtitle */
+    font-weight: 400; /* Normal font weight */
+    margin-bottom: 30px; /* Space below the subtitle */
+}
+
+.hf_form_container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hf_form_container form input,
+.hf_form_container form textarea {
+    font-size: 16px;
+    padding: 15px; /* Padding inside the inputs */
+    margin-bottom: 20px; /* Margin between each field */
+    border: 1px solid #FFFFFF; /* Border color */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    color: #FFFFFF; /* Text color */
+    border-radius: 5px; /* Slightly rounded corners for the input fields */
+}
+
+.hf_form_container form textarea {
+    height: 100px; /* Fixed height for the textarea */
+    resize: none; /* Prevent resizing of the textarea */
+}
+
+.hf_form_container form button {
+    font-size: 18px;
+    font-weight: 600; /* Semi-bold font weight */
+    color: #FFFFFF; /* Text color */
+    background: #36873E; /* Background color */
+    border: none; /* No border */
+    padding: 15px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Cursor to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.hf_form_container form button:hover {
+    background-color: #2b6b30; /* Darken the button on hover */
+}
+
+/* You might need to adjust the breakpoints and styles for responsiveness */
+@media (max-width: 768px) {
+    .hf_form_container {
+        max-width: 100%; /* Full width on smaller screens */
+        padding: 20px; /* Less padding on smaller screens */
+    }
+}

@@ -1,0 +1,63 @@
+.header_back{
+  background-image: url("back.png");
+  background-repeat-x: no-repeat;
+  background-size: cover;
+  height: 720px;
+  position: relative;
+  transition: 1.5s left ;
+}
+.header_back1 {
+  background-image: url("back2 .jpg");
+  background-repeat-x: no-repeat;
+  background-size: cover;
+  height: 720px;
+  position: relative;
+  transition: 1.5s ;
+}
+.header_back2{
+  background-image: url("back3.jpg");
+  background-repeat-x: no-repeat;
+  background-size: cover;
+  height: 720px;
+  position: relative;
+  transition: 1.5s;
+}
+.header_text{
+  position: absolute;
+  width: 628px;
+  color: #FFFFFF;
+  background: rgba(0,0,0,0.6);
+  font-size: 25px;
+  right: 1px;
+  bottom: 170px;
+  padding-right: 200px;
+}
+.rigth{
+  position: absolute;
+  bottom: 1px;
+  right: 402px;
+  padding-bottom: 53px;
+}
+.left{
+  position: absolute;
+  bottom: 1px;
+  left: 402px;
+  padding-bottom: 53px;
+}
+.balls{
+  width: fit-content;
+  display: block;
+  margin:0 auto;
+  padding: 640px 0 53px 0;
+}
+.ball{
+  font-size: 8px;
+  margin-right: 12px;
+  background: rgba(255,255,255,0.5);
+  padding: 1px 5px  ;
+  border-radius: 90px;
+  color: rgba(255,255,255,0.0);
+}
+#loc{
+  background: rgba(255,255,255,0.9);
+}

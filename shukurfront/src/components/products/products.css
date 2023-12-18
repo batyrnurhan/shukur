@@ -1,0 +1,167 @@
+.products{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.pr_h2{
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.pr_bar{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.pr_bar button{
+    text-decoration: none;
+    margin-left: 34px;
+    color: rgba(113, 113, 113, 1);
+    background: none; /* Optional: Removes default button background */
+    border: none; /* Optional: Removes default button border */
+    cursor: pointer; /* Optional: Changes cursor to pointer on hover */
+    padding: 0; /* Optional: Adjusts padding to reset button default */
+    font-family: inherit;
+
+}
+.pr_bar a:hover{
+    color: #36873E;
+    text-decoration: underline;
+}
+.pr_h2_two{
+    text-align: center;
+    color: #717171;
+
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.img_layer{
+    display: flex;
+    justify-content: space-around;
+}
+.pr_card{
+    padding: 25px 0 0 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 9px 18px 7px rgba(0, 0, 0, 0.17);
+    width: 50%;
+    margin-bottom: 100px;
+    margin-right: 5%;
+}
+.product_row{
+    justify-content: center;
+}
+.pr_card_bolt{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 162.9%; /* 26.064px */
+    display: inline;
+}
+.text_layer{
+    margin-top: 22px;
+    margin-left: 25px;
+}
+.pr_card_text{
+    width: 80%;
+}
+.pr_card_label{
+    color: #36873E;
+
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 162.9%; /* 26.064px */
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+.product_banner{
+    justify-content: space-between;
+    background: #9BCB9A;
+    width: 94%;
+    margin-left: 5px;
+    margin-bottom: 85px;
+}
+.pr_banner_text{
+    margin-left: 135px;
+    margin-bottom: 40px;
+}
+.product_banner_a{
+    color: #000;
+    text-decoration: none;
+}
+.pr_banner_text h2{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.pr_banner_text p{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162%; /* 25.92px */
+    width: 413px;
+    margin-bottom: 35px;
+}
+.pr_banner_text a{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 162%; /* 25.92px */
+    border-radius: 10px;
+    border: 1px solid #11966E;
+    background: #11966E;
+    padding: 7px 26px;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+.pr_banner_img img{
+    margin-top: 37px;
+}
+.Not_halal h2{
+    color: #717171;
+
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.not_halal .pr_card_label{
+    color: #FF2727;
+}
+.Frequently_viewed h2{
+    color: #717171;
+
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-align: center;
+}
+.pr_slaider{
+    position: relative;
+}
+.pr_left{
+    position: absolute;
+    left: -30px;
+    top: 177px;
+}
+.pr_right{
+    position: absolute;
+    right: 50px;
+    top: 177px;
+}

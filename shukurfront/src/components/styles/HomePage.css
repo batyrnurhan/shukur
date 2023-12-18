@@ -1,0 +1,338 @@
+.top-navbar {
+    background-color: #5f5f5f;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement-text {
+    color: #000;
+    margin-right: auto;
+}
+
+.top-nav-menu {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.top-nav-item {
+    color: #000;
+    text-decoration: none;
+    padding: 0 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.top-nav-item.active {
+    color: #00A859;
+}
+
+.main-navbar {
+    background-color: #008837;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.main-margin{
+    position: relative;
+    margin-left: 7.8em;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.app-download-button {
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-left: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.app-download-button:hover {
+    background-color: #ffffff;
+    color: #008837;
+}
+
+.main-nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav-item-profile, .main-nav-item-raiting, .main-nav-item-loop {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.main-nav-item:hover {
+    color: #cce8d0;
+}
+
+.main-nav-item-profile:before, .main-nav-item-raiting:before, .main-nav-item-loop:before {
+    display: inline-block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+}
+
+.main-nav-item-loop:before {
+    background: url('../HomePageStyle/search (1) 1.png') no-repeat center center;
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-button {
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 120px; /* Adjust padding as needed */
+  background-color: #f5f5f5; /* Adjust background color as needed */
+}
+
+.about-content {
+  max-width: 600px; /* Adjust width as needed */
+}
+
+.about-content h2 {
+  font-size: 36px; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.about-content p {
+  font-size: 18px; /* Adjust font size as needed */
+  line-height: 1.6; /* Adjust line height as needed */
+}
+
+.about-illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive styles if needed */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-illustration {
+    margin-top: 20px;
+  }
+
+  .about-illustration img {
+    max-width: 80%;
+  }
+}
+
+
+
+.blog-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.blog-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 0; /* Adjust padding as needed */
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    flex: 0 0 calc(20% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    width: 100%;
+    gap: 10px;
+    margin-left: 160px;
+}
+
+.card-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.arrow-prev, .arrow-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.arrow-prev {
+    left: 10px; /* Adjust as needed */
+}
+
+.arrow-next {
+    right: 10px; /* Adjust as needed */
+}
+
+.arrow-prev img, .arrow-next img {
+    width: 30px;
+    height: 30px;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.dot {
+    padding: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+.dot.active {
+    background: #333;
+}
+
+.arrow-prev, .arrow-next {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.arrow-prev img, .arrow-next img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Adjust the spacing between the main footer elements */
+    align-items: center; /* Vertically center the items */
+    padding: 20px; /* Add padding as needed */
+    background-color: #333; /* Adjust the color as needed */
+    color: white; /* Adjust text color as needed */
+}
+
+.contact-info, .navigation, .search-bar {
+    display: flex;
+    flex-direction: column; /* Stack the children elements vertically */
+    align-items: flex-start; /* Align the items to the start of the flex container */
+}
+.contact-detail {
+    margin-bottom: 10px; /* Adjust the spacing between contact details */
+}
+
+
+
+/* This styles the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+/* This styles the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* color of the scroll thumb */
+  border-radius: 6px; /* roundness of the scroll thumb */
+  border: 3px solid #f5f5f5; /* creates padding around scroll thumb */
+}
+
+/* This styles the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f5f5f5; /* color of the track */
+}
+
+/* This styles the scrollbar upon hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scroll thumb when hovered or active */
+}

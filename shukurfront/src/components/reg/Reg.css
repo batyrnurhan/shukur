@@ -1,0 +1,63 @@
+.reg{
+  position:fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background: rgba(0,0,0,0.2);
+}
+.reg_card{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  padding: 35px 300px;
+  background: #FFFFFF;
+  position: relative;
+  border-radius:10px ;
+}
+.reg_card h2{
+  text-align: center;
+  margin-bottom: 24px;
+}
+.reg_card form{
+  display: flex;
+  flex-direction: column;
+}
+.reg_card form input{
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.30);
+  padding: 12px 192px 12px 20px;
+}
+.reg_card form input::placeholder{
+  color: rgba(0, 0, 0, 0.50);
+  /* текст инпута */
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 162.9%; /* 26.064px */
+}
+.reg_card form button{
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 162.9%; /* 32.58px */
+  color: #FFFFFF;
+  border-radius: 10px;
+  background: #36873E;
+  padding: 15px 35px;
+  margin-top: 15px;
+  margin-bottom: 125px;
+}
+.reg_card img{
+  position: absolute;
+  top: 28px;
+  right: 25px;
+}

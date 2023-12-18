@@ -1,0 +1,118 @@
+.User_profile{
+    max-width: 980px;
+    margin: 0 auto;
+}
+.User_profile_header{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.UP_h2{
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+.UP_1_container img{
+    padding: 71px;
+    border-radius: 180px;
+    background: #C4C4C4;
+}
+.UP_2_container{
+    margin-bottom: 50px;
+}
+.UP_2_container h3{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-left: 50px;
+}
+.UP_2_container .UP_brim{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    position: relative;
+    margin-top: 35px;
+}
+.UP_pen{
+    position: absolute;
+    right: 23px;
+    bottom: 1px;
+}
+.UP_pen_text{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.30);
+
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.UP_brim_text{
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: inline;
+    margin-left: 15px;
+}
+.UP_brim_text_margin{
+    margin-left:30%;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.UP_green_back{
+    background: #9BCB9A;
+    margin: 50px 0;
+}
+.UP_search{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #FFF;
+    box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.13);
+}
+.UP_search_wrap{
+    padding: 50px;
+}
+.UP_search h2{
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.UP_search .UP_search_form{
+    text-align: center;
+}
+.UP_search .UP_search_form input{
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    background: #FFF;
+    width: 340px;
+    height: 50px;
+}
+.UP_search .UP_search_form label{
+    position: relative;
+}
+.UP_search .UP_search_form label button{
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    padding: 0;
+}
+.UP_searcH_history h2{
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}

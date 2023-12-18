@@ -1,0 +1,86 @@
+.slogan{
+  font-size: 12px;
+}
+.nav_back{
+  background: rgba(0, 0, 0, 0.74);
+  color:#FFFFFF;
+}
+.header_nav{
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_nav li{
+  display: inline;
+  list-style: none;
+  margin-left: 36px;
+  font-size: 12px;
+}
+.header_nav li:hover{
+  color: #11966E;
+  transition: 0.3s ease;
+}
+.header_nav ul{
+  list-style: none;
+
+}
+.header_nav ul a{
+  color: #FEFEFE;
+  text-decoration: none;
+}
+#unique_link{
+  margin-right: 44px;
+  margin-left: 0;
+}
+.custom_base{
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+.custom_base a{
+  text-decoration: none;
+}
+.menu_back{
+  background: rgba(17, 150, 110, 0.90);
+}
+.logo_text{
+  margin-left: 7px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  color: #FEFEFE;
+}
+.menu_button{
+  margin-right: 62px;
+}
+.menu_button a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.app_button{
+  margin-right: 91px;
+  padding: 10px 5px 0 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.app_button a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.menu_bt_div{
+  display: flex;
+}
+.menu_bt_img{
+  display: block;
+  margin: 0 auto;
+}
+#menu_bt_last{
+  margin-right: 110px;
+}
