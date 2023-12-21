@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import PrayerTimesView
+from .views import PrayerTimesView, search
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +32,7 @@ urlpatterns = [
     path('api/', include('places.urls')),
     path('api/pray/', include('pray.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('search/', search, name='search'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

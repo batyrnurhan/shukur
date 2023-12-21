@@ -1,7 +1,25 @@
 import logo from "../menu/Logo.svg"
 import "./footer.scss"
-function Footer(){
-    return(
+import axios from "axios";
+import React, { useState } from 'react';
+
+
+function Footer() {
+    const [searchResults, setSearchResults] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearch = async (e) => {
+        e.preventDefault();
+        window.location.href = `/search-results?query=${encodeURIComponent(searchQuery)}`;
+        try {
+            const response = await axios.get(`http://localhost:8080/search/?query=${searchQuery}`);
+            setSearchResults(response.data);
+        } catch (error) {
+            console.error('Error fetching search results', error);
+        }
+    };
+
+    return (
         <div className={"footer_back"}>
             <div className={"base"}>
                 <div className={"row footer"}>
@@ -10,7 +28,7 @@ function Footer(){
                         <div className={"footer_one"}>Теперь поиск продуктов стал еще легче</div>
                         <div className={"footer_number"}>+ 7(705) 530 65 19</div>
                         <div className={"footer_email"}>shukurInfo.@gmail.com</div>
-                        <div className={"footer_two"}>050040 Казахстан, Алматы. Манаса 30\31</div>
+                        <div className={"footer_two"}>050040 Казахстан, Алматы. Манаса 30/31</div>
                     </div>
                     <div className={"col-lg-4"}>
                         <div className={"footer_nav"}>Навигация</div>
@@ -39,13 +57,27 @@ function Footer(){
                         </div>
                     </div>
                     <div className={"col-lg-4"}>
-                        <form>
-                            <input placeholder={"Поиск"} className={"footer_input"}/>
+                        <form onSubmit={handleSearch}>
+                            <input
+                                placeholder={"Поиск"}
+                                className={"footer_input"}
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                            />
                         </form>
+                        {searchResults.length > 0 && (
+                            <div className="search-results-dropdown">
+                                {searchResults.users && searchResults.users.map(user => (
+                                    <div key={user.id} onClick={() => window.location.href = `/user/${user.id}`}>
+                                        {user.username}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-export default Footer
+export default Footer;
