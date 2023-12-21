@@ -13,11 +13,15 @@ import LogoutButton from "../Logout";
 function User_Profile({ authToken }) {
     const [profile, setProfile] = useState(null);
     const [error, setError] = useState('');
+    const navigate = useNavigate(); // Initialize the navigate function
+    const [editMode, setEditMode] = useState(false);
+    const [updatedProfile, setUpdatedProfile] = useState({});
 
     useEffect(() => {
         const authToken = localStorage.getItem('authToken'); // Retrieve the token from local storage
         if (!authToken) {
             setError('No auth token found');
+            navigate('/login'); // Redirect to login page
             return;
         }
 
@@ -35,6 +39,28 @@ function User_Profile({ authToken }) {
 
         fetchProfile();
     }, []);
+
+    const toggleEditMode = () => {
+        setEditMode(!editMode);
+        setUpdatedProfile(profile); // Initialize updatedProfile with current profile
+    };
+
+    const handleChange = (event) => {
+        setUpdatedProfile({ ...updatedProfile, [event.target.name]: event.target.value });
+    };
+
+    const saveProfile = async () => {
+    try {
+        const response = await axios.put('http://localhost:8000/api/accounts/user_profile/update/', updatedProfile, {
+            headers: { Authorization: `Token ${authToken}` },
+        });
+        setProfile(response.data);
+        setEditMode(false);
+    } catch (error) {
+        console.error('Error updating profile', error);
+    }
+};
+
 
     if (error) {
         return <div>Error: {error}</div>;
