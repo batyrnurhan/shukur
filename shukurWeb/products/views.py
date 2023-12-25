@@ -1,5 +1,7 @@
 from django.views.generic import ListView
 from rest_framework import generics
+from rest_framework.generics import RetrieveAPIView
+
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
 from django.db.models import Q
@@ -55,3 +57,8 @@ class NonCertifiedProductsView(generics.ListAPIView):
 
     def get_queryset(self):
         return Product.objects.filter(certified=False)
+
+class ProductDetailView(RetrieveAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    lookup_field = 'id'

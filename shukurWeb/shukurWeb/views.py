@@ -1,6 +1,3 @@
-# views.py
-
-# ... (other imports)
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -23,33 +20,26 @@ class PrayerTimesView(APIView):
 
 from django.db.models import Q
 from django.http import JsonResponse
-
-from accounts.models import CustomUser, Adres, Review
 from blogs.models import BlogPost
-from products.models import Category, Product, ProductRating, ProductRequest
+from products.models import Product
+from blogs.serializers import BlogPostSerializer
+from products.serializers import ProductSerializer
+
 def search(request):
     query = request.GET.get('query', '')
 
-    # Searching in each model
-    users = CustomUser.objects.filter(Q(username__icontains=query) | Q(full_name__icontains=query))
-    addresses = Adres.objects.filter(Q(city__icontains=query) | Q(district__icontains=query) | Q(home__icontains=query))
-    reviews = Review.objects.filter(review_text__icontains=query)
+    # Query for Blog Posts
     blog_posts = BlogPost.objects.filter(title__icontains=query)
-    categories = Category.objects.filter(name__icontains=query)
+    blog_post_serializer = BlogPostSerializer(blog_posts, many=True)
+
+    # Query for Products
     products = Product.objects.filter(name__icontains=query)
-    product_ratings = ProductRating.objects.filter(Q(product__name__icontains=query) | Q(rating__icontains=query))
-    product_requests = ProductRequest.objects.filter(name__icontains=query)
+    product_serializer = ProductSerializer(products, many=True)
 
     # Combine results
     results = {
-        'users': list(users.values()),
-        'addresses': list(addresses.values()),
-        'reviews': list(reviews.values()),
-        'blog_posts': list(blog_posts.values()),
-        'categories': list(categories.values()),
-        'products': list(products.values()),
-        'product_ratings': list(product_ratings.values()),
-        'product_requests': list(product_requests.values())
+        'blog_posts': blog_post_serializer.data,
+        'products': product_serializer.data
     }
 
-    return JsonResponse(results)
+    return JsonResponse(results, safe=False)

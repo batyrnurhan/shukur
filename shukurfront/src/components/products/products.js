@@ -5,14 +5,18 @@ import left from "./left.svg"
 import right from "./right.svg"
 import {useEffect, useState} from "react";
 import axios from "axios";
-import productPlaceholder from "./pngegg (36) 1.png"; // Placeholder image for products without an image
+import productPlaceholder from "./pngegg (36) 1.png";
+import {useNavigate} from "react-router-dom"; // Placeholder image for products without an image
 
 function Products(){
     const [certifiedProducts, setCertifiedProducts] = useState([]);
     const [nonCertifiedProducts, setNonCertifiedProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
-
+    const navigate = useNavigate();
+    const handleProductClick = (productId) => {
+        navigate(`/products/${productId}`);
+    };
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -59,7 +63,7 @@ function Products(){
             <h2 className={"pr_h2_two"}>Халяльные продукты</h2>
             <div className={"product_row row"}>
                 {filterByCategory(certifiedProducts).map(product => (
-                    <div key={product.id} className={"col-lg-2 pr_card"}>
+                    <div key={product.id} className={"col-lg-2 pr_card"} onClick={() => handleProductClick(product.id)}>
                         <div className={"img_layer"}>
                             <img src={productPlaceholder} alt={product.name} />
                         </div>

@@ -61,3 +61,29 @@
   display: flex;
   flex-direction: column;
 }
+
+.search-results-dropdown {
+    background-color: #ffffff; /* White background for visibility */
+    color: #000000; /* Black text for contrast */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: absolute; /* Position it below the search bar */
+    width: 100%; /* Match the width of the search input */
+    max-height: 300px; /* Limit the height with overflow for longer lists */
+    overflow-y: auto; /* Enable vertical scrolling for overflow */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    left: 0; /* Align it with the left of the parent container */
+    top: 100%; /* Position it right below the search input */
+    margin-top: 0.5rem; /* Add a small space between the input and the dropdown */
+}
+
+.search-results-dropdown div {
+    padding: 10px 15px; /* Padding inside each result item */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    line-height: 1.5; /* Adequate line spacing for readability */
+}
+
+.search-results-dropdown div:hover {
+    background-color: #f8f8f8; /* Slight background change on hover for feedback */
+}

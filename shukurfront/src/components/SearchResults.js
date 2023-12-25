@@ -13,7 +13,7 @@ function SearchResults() {
 
     const fetchResults = async (query) => {
         try {
-            const response = await axios.get(`http://your-backend-url/search/?query=${query}`);
+            const response = await axios.get(`http://localhost:8000/search/?query=${query}`);
             setResults(response.data);
         } catch (error) {
             console.error('Error fetching search results', error);
@@ -30,7 +30,7 @@ function SearchResults() {
                     {user.username}
                 </div>
             ))}
-            {/* Handle other model results similarly */}
+            {/* Additional results rendering can be added here */}
         </div>
     );
 }

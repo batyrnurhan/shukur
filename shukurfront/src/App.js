@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import Profile from './components/Profile';
@@ -14,6 +14,9 @@ import Blog from "./components/Blog";
 import Reviews from "./components/Reviews";
 import HigherFooter from "./components/higher_footer/HigherFooter";
 import Reg from "./components/reg/Reg";
+import SearchResults from "./components/SearchResults";
+import ProductDetail from "./components/products/ProductDetail";
+
 const App = () => {
     return (
         <Router>
@@ -28,6 +31,8 @@ const App = () => {
                     <Route path="/product-search" element={<Products />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/reviews" element={<Reviews />} />
+                    <Route path="/search-results" element={<SearchResults />} />
+                    <Route path="/products/:productId" element={<ProductDetail />} />
 
                 </Routes>
             </div>
